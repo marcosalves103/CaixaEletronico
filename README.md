@@ -5,3 +5,4 @@
 
 -  Fernando Souza de Faria
 - Felipe Medeiros
+- José Thomaz
