@@ -1,1 +1,1 @@
-Este ditetório deve conter os arquivos dos alunos responsáveis pelo projeto administrativo.
+Este ditetório deve conter os arquivos dos alunos responsáveis pelo projeto administrativos.
