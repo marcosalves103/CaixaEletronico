@@ -1,0 +1,5 @@
+.vscode
+__pycache__
+app/__pycache__
+app/db/__pycache__
+
