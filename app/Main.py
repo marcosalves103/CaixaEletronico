@@ -108,7 +108,7 @@ class Main:
     pass
 
   def buscarClientePeloId(self):
-    cliente_id = int(input("Digte o identificador do Cliente: "))
+    cliente_id = int(input("Digite o identificador do Cliente: "))
 
     cliente = self.cliente.buscarPeloId(cliente_id)
     if cliente:
