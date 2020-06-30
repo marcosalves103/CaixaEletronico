@@ -4,3 +4,4 @@
 - Élida Amoroso Loureiro
 
 -  Fernando Souza de Faria
+- Felipe Medeiros
