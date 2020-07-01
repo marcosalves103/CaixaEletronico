@@ -1,4 +1,5 @@
 # CaixaEletronico
+
 - Marcos Renato Alves
 - Vitória Lopes Diogo
 - Nicholas Misael Fagundes Matos
@@ -7,4 +8,5 @@
 - Felipe Medeiros
 - José Thomaz
 - Rodrigo Ferreira
+- Igor Parminondi Silva
 
