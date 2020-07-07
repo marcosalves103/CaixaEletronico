@@ -10,44 +10,44 @@ class Main:
     self.cliente = Cliente(clientes)
 
     while True:
-        time.sleep(2)
-        os.system("cls")
+      time.sleep(2)
+      os.system("cls")
 
-        print("===Banco Digital===")
-        print("1 - Adicionar Cliente")
-        print("2 - Alterar Cliente")
-        print("3 - Excluir Cliente")
-        print("4 - Buscar Cliente Pelo E-mail")
-        print("5 - Buscar Cliente Pelo Identificador")
-        print("6 - Listar Todos os Clientes")
-        print("7 - Sair do Sistema de Banco")
+      print("===Banco Digital===")
+      print("1 - Adicionar Cliente")
+      print("2 - Alterar Cliente")
+      print("3 - Excluir Cliente")
+      print("4 - Buscar Cliente Pelo E-mail")
+      print("5 - Buscar Cliente Pelo Identificador")
+      print("6 - Listar Todos os Clientes")
+      print("7 - Sair do Sistema de Banco")
 
-        opcaoSelecionada = int(input("Digite o opção desejada: "))
+      opcaoSelecionada = int(input("Digite o opção desejada: "))
 
-        if opcaoSelecionada == 1:
-          self.adicionarCliente()
+      if opcaoSelecionada == 1:
+        self.adicionarCliente()
 
-        elif opcaoSelecionada == 2:
-          self.alterarCliente()
+      elif opcaoSelecionada == 2:
+        self.alterarCliente()
 
-        elif opcaoSelecionada == 3:
-          self.excluirCliente()
+      elif opcaoSelecionada == 3:
+        self.excluirCliente()
 
-        elif opcaoSelecionada == 4:
-          self.buscarClientePeloEmail()
+      elif opcaoSelecionada == 4:
+        self.buscarClientePeloEmail()
 
-        elif opcaoSelecionada == 5:
-          self.buscarClientePeloId()
+      elif opcaoSelecionada == 5:
+        self.buscarClientePeloId()
 
-        elif opcaoSelecionada == 6:
-          self.listarTodosClientes()
+      elif opcaoSelecionada == 6:
+        self.listarTodosClientes()
 
-        elif opcaoSelecionada == 7:
-            print("Saindo do programa...")
-            print("Inté...")
-        else:
-            print("Opcão incorreta, por favor digite novamente...")
-        pass
+      elif opcaoSelecionada == 7:
+          print("Saindo do programa...")
+          print("Inté...")
+      else:
+          print("Opcão incorreta, por favor digite novamente...")
+      pass
 
   pass
 
