@@ -9,4 +9,3 @@
 - José Thomaz
 - Rodrigo Ferreira
 - Igor Parminondi Silva
-
