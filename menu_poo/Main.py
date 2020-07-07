@@ -1,8 +1,8 @@
 import os
 import time
 
-from app.Cliente import Cliente
-from app.db.clientes import clientes
+from menu_poo.Cliente import Cliente
+from menu_poo.db.clientes import clientes
 
 class Main:
 
