@@ -1,22 +1,20 @@
 import os
 import time
+from src.Transactions import Transactions
 
 valorsaldo = 100.00
 
+transf = Transactions(1)
+
 
 def saldo():
-    input("Digite o código de segurança: ")
-    print("Agência: 000000")
-    print("Conta: 00000000000")
-    print("Cliente: XXXXXXXXXX\n")
+    transf.query()
 
-    print("Saldo: R$ ", valorsaldo, "\n")
-
-    print("Para imprimir digite 1")
+    print("\nPara imprimir digite 1")
     print("Para finalizar a consulta digite 2")
     escolha = input("Digite o número: ")
     print()
-
+    
     while(escolha != "1" and escolha != "2"):
         print("Digite corretamente...")
         escolha = input("Digite o número: ")
@@ -28,15 +26,8 @@ def saldo():
 
 
 def trans():
-    input("Digite o código de segurança: ")
-    print("\nDigite as informações sobre o destinatário da transderência")
-    input("\nAgência: ")
-    input("Banco: ")
-    input("Conta: ")
+    transf.transference() 
 
-    valor = float(input("\nDigite o valor que será transferido: "))
-    while(valor > valorsaldo):
-        valor = float(input("\nDigite um valor menor que seu saldo atual: "))
     t = input("\nConfirmar a transação (Digite 1 para SIM ou 2 para NÃO)\n")
     while(t != "1" and t != "2"):
         t = input("\nConfirmar transação (Digite 1 para SIM ou 2 para NÃO)\n")
@@ -50,12 +41,8 @@ def trans():
 
 
 def extrato():
-    extratos = [1, 2, 3]
-    input("Digite o código de segurança: ")
     print("\n Histórico das operações\n")
-
-    for i in range(len(extratos), 0, -1):
-        print(i, " - Valor: 0,00 | Origem: Crédito | Data: 00/00/0000 00:00:00")
+    transf.statement()
 
     input("\nPressione enter para voltar para o menu")
 
@@ -70,6 +57,7 @@ def principal():
         print("3 - Consulte seu extrato")
         print("4 - Sair do sistema Banco")
         opcao = int(input("Digite o opção desejada:"))
+        input()
 
         if opcao == 1:
             saldo()
