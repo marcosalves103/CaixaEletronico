@@ -40,7 +40,7 @@ class Transactions:
 
     def transference(self):
         data_atual = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        
+
         destino = int(
             input("Digite o número da conta que deseja depositar...    "))
 
@@ -102,7 +102,8 @@ class Transactions:
 
     def statement(self):
         try:
-            param = "SELECT id_origem, id_destino, valor, tipo, data_extrato from extrato where id_conta=" + str(self.id)
+            param = "SELECT id_origem, id_destino, valor, tipo, data_extrato from extrato where id_conta=" + \
+                str(self.id)
             mycursor.execute(param)
             extratos = mycursor.fetchall()
             for row in extratos:
@@ -111,7 +112,7 @@ class Transactions:
                 print("Conta Destino: ", row[1])
                 print("Valor: ", row[2])
                 print("Tipo: ", row[3])
-                print("Data: ", row[4])
+                print("Data: ", row[4].strftime('%d/%m/%Y %H:%M:%S'))
                 print("--------------------------------\n")
 
         except ConnectionError:
@@ -123,5 +124,5 @@ class Transactions:
 
 
 #objeto = Transactions(random.randint(10000000, 90000000))
-#objeto.query()
-#objeto.transference()
+# objeto.query()
+# objeto.transference()

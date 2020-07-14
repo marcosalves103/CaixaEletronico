@@ -2,7 +2,6 @@ import os
 import time
 from src.Transactions import Transactions
 
-valorsaldo = 100.00
 
 transf = Transactions(1)
 
@@ -14,7 +13,7 @@ def saldo():
     print("Para finalizar a consulta digite 2")
     escolha = input("Digite o número: ")
     print()
-    
+
     while(escolha != "1" and escolha != "2"):
         print("Digite corretamente...")
         escolha = input("Digite o número: ")
@@ -26,7 +25,7 @@ def saldo():
 
 
 def trans():
-    transf.transference() 
+    transf.transference()
 
     t = input("\nConfirmar a transação (Digite 1 para SIM ou 2 para NÃO)\n")
     while(t != "1" and t != "2"):
@@ -57,7 +56,7 @@ def principal():
         print("3 - Consulte seu extrato")
         print("4 - Sair do sistema Banco")
         opcao = int(input("Digite o opção desejada:"))
-        input()
+
 
         if opcao == 1:
             saldo()
