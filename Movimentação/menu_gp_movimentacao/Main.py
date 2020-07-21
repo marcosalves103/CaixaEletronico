@@ -1,5 +1,5 @@
 import os
-
+import time
 
 print("Bem-vindo!")
 
@@ -31,9 +31,34 @@ class Proj:
   pass
 
   def saqueCliente(req):
-    dinheiro = {
-      input("Informe o quanto gostaria de sacar: ")
-    }
+    dirname = os.path.dirname(__file__)
+    filename = os.path.join(dirname, 'dinheiroNaMaquina.txt')
+
+
+    arquivo = open(filename, 'r')
+    quantidadeNoCaixa = arquivo.read()
+    print("Quantidade disponível no caixa: "+quantidadeNoCaixa)
+    arquivo.close()
+
+    int(float(quantidadeNoCaixa))
+
+    dinheiro = int(input("Informe o quanto gostaria de sacar: "))
+
+    if dinheiro<=int(float(quantidadeNoCaixa)):
+      arquivoEscrita = open(filename, 'w')
+      #arquivoEscrita.seek(0)
+      quantidade = int(float(quantidadeNoCaixa))-dinheiro
+      arquivoEscrita.write(str(quantidade))
+      #arquivoEscrita.truncate()
+      arquivoEscrita.close()
+      print("Operação concluida com sucesso. Você sacou: "+"R$"+str(dinheiro))
+    else:
+      print("Quantidade não disponível. Por favor, insira manualmente mais dinheiro, ou tente novamente mais tarde")
+
+
+    
+
+    time.sleep(2)
     pass
 
   def depositoCliente(req):
